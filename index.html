@@ -1,0 +1,2302 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      window.pixelId = "67edf4c3c10671e61577006d";
+      var a = document.createElement("script");
+      a.setAttribute("async", "");
+      a.setAttribute("defer", "");
+      a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+      document.head.appendChild(a);
+    </script>
+    <title>Ajude o Diego - Doação</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #e6f0ff;
+        color: #333;
+        line-height: 1.6;
+        padding-bottom: 80px; /* Espaço apenas para barra de progresso */
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: white;
+        min-height: 100vh;
+      }
+
+      /* Cabeçalho */
+      .header {
+        background: linear-gradient(135deg, #2f80ed 0%, #1e6bb8 100%);
+        color: white;
+        padding: 50px 20px;
+        text-align: center;
+      }
+
+      .header h1 {
+        font-size: 42px;
+        font-weight: 800;
+        margin: 0 auto;
+        line-height: 1.2;
+        letter-spacing: -0.5px;
+        text-transform: uppercase;
+        max-width: 800px;
+      }
+
+      .subtitle-section {
+        background: white;
+        padding: 25px 20px;
+        text-align: center;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      }
+
+      .subtitle-section p {
+        font-size: 18px;
+        font-weight: 400;
+        opacity: 0.7;
+        max-width: 600px;
+        margin: 0 auto;
+        line-height: 1.5;
+        color: #666;
+        letter-spacing: 0.2px;
+      }
+
+      @media (max-width: 768px) {
+        .header {
+          padding: 40px 15px;
+        }
+
+        .header h1 {
+          font-size: 32px;
+        }
+
+        .subtitle-section {
+          padding: 20px 15px;
+        }
+
+        .subtitle-section p {
+          font-size: 16px;
+        }
+      }
+
+      .header-highlight {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.15);
+        padding: 3px 10px;
+        border-radius: 20px;
+        font-weight: 500;
+        margin-top: 15px;
+        backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .header-icons {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .header-icon {
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        transition: all 0.3s ease;
+      }
+
+      .header-icon:hover {
+        transform: translateY(-2px);
+        background: rgba(255, 255, 255, 0.25);
+      }
+
+      /* Seção de Vídeo */
+      .video-section {
+        padding: 30px 20px;
+        background-color: #e6f0ff;
+        text-align: center;
+      }
+
+      .video-card {
+        background-color: white;
+        border-radius: 15px;
+        padding: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        position: relative;
+        max-width: 300px;
+        margin: 0 auto;
+      }
+
+      .video-embed {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        border: none;
+      }
+
+      .video-embed iframe {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+      }
+
+      /* Seção de Comentários */
+      .comments-section {
+        padding: 30px 20px;
+        background-color: white;
+      }
+
+      .comments-container {
+        background-color: #f8f9fa;
+        border-radius: 15px;
+        padding: 25px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .comments-title {
+        font-size: 20px;
+        font-weight: bold;
+        color: #2f80ed;
+        text-align: center;
+        margin-bottom: 25px;
+      }
+
+      .comment {
+        background-color: white;
+        border-radius: 10px;
+        padding: 15px;
+        margin-bottom: 15px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border-left: 4px solid #2f80ed;
+      }
+
+      .comment:last-child {
+        margin-bottom: 0;
+      }
+
+      .comment-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+        gap: 10px;
+      }
+
+      .comment-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #2f80ed, #1e6bb8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: bold;
+        font-size: 14px;
+      }
+
+      .comment-info {
+        flex: 1;
+      }
+
+      .comment-name {
+        font-weight: bold;
+        color: #2f80ed;
+        font-size: 14px;
+      }
+
+      .comment-time {
+        font-size: 12px;
+        color: #999;
+      }
+
+      .comment-amount {
+        background-color: #2f80ed;
+        color: white;
+        padding: 4px 8px;
+        border-radius: 12px;
+        font-size: 12px;
+        font-weight: bold;
+      }
+
+      .comment-text {
+        color: #555;
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      .comment-reactions {
+        margin-top: 8px;
+        display: flex;
+        gap: 15px;
+        font-size: 12px;
+        color: #666;
+      }
+
+      .reaction {
+        cursor: pointer;
+        transition: color 0.3s ease;
+      }
+
+      .reaction:hover {
+        color: #2f80ed;
+      }
+
+      .donation-stats {
+        background: linear-gradient(135deg, #2f80ed, #1e6bb8);
+        color: white;
+        padding: 20px;
+        border-radius: 15px;
+        margin-bottom: 25px;
+        text-align: center;
+      }
+
+      .stats-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-top: 15px;
+      }
+
+      .stat-item {
+        text-align: center;
+      }
+
+      .stat-number {
+        font-size: 24px;
+        font-weight: bold;
+        display: block;
+      }
+
+      .stat-label {
+        font-size: 12px;
+        opacity: 0.9;
+      }
+
+      /* Seção de Tabs */
+      .tabs-section {
+        padding: 20px;
+        background-color: white;
+      }
+
+      .tabs-container {
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+
+      .tabs {
+        display: flex;
+        background-color: #f8f9fa;
+      }
+
+      .tab {
+        flex: 1;
+        padding: 15px;
+        text-align: center;
+        cursor: pointer;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        border: none;
+        background: none;
+      }
+
+      .tab.active {
+        background-color: #2f80ed;
+        color: white;
+      }
+
+      .tab-content {
+        padding: 25px;
+        display: none;
+      }
+
+      .tab-content.active {
+        display: block;
+      }
+
+      .story-text {
+        font-size: 16px;
+        line-height: 1.8;
+        color: #555;
+      }
+
+      .story-text strong {
+        color: #2f80ed;
+      }
+
+      /* Seção da Família */
+      .family-section {
+        padding: 30px 20px;
+        background-color: #2f80ed;
+      }
+
+      .family-card {
+        background-color: white;
+        border-radius: 15px;
+        padding: 25px;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .family-photos {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 20px;
+      }
+
+      .photo {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        border: 3px solid #2f80ed;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+
+      .family-text {
+        font-size: 16px;
+        color: #555;
+        margin-bottom: 20px;
+      }
+
+      /* Barra de Progresso Fixa */
+      .progress-bar-fixed {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: white;
+        box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.1);
+        padding: 15px 20px;
+        z-index: 1000;
+        border-top: 3px solid #2f80ed;
+      }
+
+      .progress-container {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .progress-header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 8px;
+        font-size: 14px;
+        font-weight: bold;
+        color: #333;
+      }
+
+      .progress-bar {
+        width: 100%;
+        height: 12px;
+        background-color: #e9ecef;
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .progress-fill {
+        height: 100%;
+        background: linear-gradient(90deg, #2f80ed, #1e6bb8);
+        border-radius: 10px;
+        transition: width 0.8s ease;
+        position: relative;
+      }
+
+      .progress-fill::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.4),
+          transparent
+        );
+        animation: shimmer 2s infinite;
+      }
+
+      @keyframes shimmer {
+        0% {
+          left: -100%;
+        }
+        100% {
+          left: 100%;
+        }
+      }
+
+      .progress-text {
+        text-align: center;
+        margin-top: 5px;
+        font-size: 12px;
+        color: #666;
+      }
+
+      /* Notificação de Doação */
+      .donation-notification {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: linear-gradient(135deg, #2f80ed, #1e6bb8);
+        color: white;
+        padding: 15px 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(47, 128, 237, 0.3);
+        transform: translateX(400px);
+        transition: transform 0.5s ease;
+        z-index: 1001;
+        max-width: 300px;
+      }
+
+      .donation-notification.show {
+        transform: translateX(0);
+      }
+
+      .notification-header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 5px;
+      }
+
+      .notification-avatar {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 12px;
+      }
+
+      .notification-info {
+        flex: 1;
+      }
+
+      .notification-name {
+        font-weight: bold;
+        font-size: 14px;
+      }
+
+      .notification-amount {
+        font-size: 12px;
+        opacity: 0.9;
+      }
+
+      .notification-message {
+        font-size: 12px;
+        opacity: 0.9;
+        margin-top: 5px;
+      }
+
+      /* Novo Rodapé com Direitos Reservados */
+      .copyright-footer {
+        background: linear-gradient(135deg, #1a1a2e, #16213e);
+        color: white;
+        text-align: center;
+        padding: 30px 20px 25px 20px;
+        font-size: 13px;
+        border-top: 3px solid #2f80ed;
+        box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.3);
+        margin-top: 40px;
+      }
+
+      .copyright-footer::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, #2f80ed, transparent);
+      }
+
+      .footer-content {
+        position: relative;
+      }
+
+      .copyright-footer p {
+        margin: 4px 0;
+        font-weight: 500;
+        opacity: 0.9;
+      }
+
+      .copyright-text {
+        font-size: 12px;
+        opacity: 0.7;
+        margin-bottom: 8px;
+      }
+
+      .contact-info {
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      .copyright-footer a {
+        color: #64b5f6;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        position: relative;
+        font-weight: 600;
+      }
+
+      .copyright-footer a::after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: linear-gradient(90deg, #64b5f6, #2196f3);
+        transition: width 0.3s ease;
+      }
+
+      .copyright-footer a:hover {
+        color: #2196f3;
+        text-shadow: 0 0 10px rgba(100, 181, 246, 0.5);
+      }
+
+      .copyright-footer a:hover::after {
+        width: 100%;
+      }
+
+      /* Responsividade */
+      @media (max-width: 768px) {
+        .container {
+          margin: 0;
+        }
+
+        .header h1 {
+          font-size: 20px;
+        }
+
+        .video-placeholder {
+          height: 300px;
+        }
+
+        .family-photos {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .stats-grid {
+          grid-template-columns: 1fr;
+          gap: 10px;
+        }
+
+        .progress-bar-fixed {
+          padding: 10px 15px;
+        }
+
+        .copyright-footer {
+          font-size: 11px;
+          padding: 25px 15px 20px 15px;
+          margin-top: 30px;
+        }
+
+        .contact-info {
+          font-size: 12px;
+        }
+
+        .donation-notification {
+          right: 10px;
+          max-width: 250px;
+          padding: 12px 15px;
+        }
+      }
+
+      /* Animações */
+      .bounce {
+        animation: bounce 2s infinite;
+      }
+
+      @keyframes bounce {
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-10px);
+        }
+        60% {
+          transform: translateY(-5px);
+        }
+      }
+
+      .fade-in {
+        animation: fadeIn 1s ease-in;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .pulse {
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      /* Botões de Doação */
+      .donation-buttons-section {
+        padding: 30px 20px;
+        background-color: #f8f9fa;
+        text-align: center;
+      }
+
+      .donation-buttons-title {
+        font-size: 24px;
+        font-weight: bold;
+        color: #2f80ed;
+        margin-bottom: 20px;
+      }
+
+      .donation-buttons-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+        max-width: 500px;
+        margin: 0 auto 20px auto;
+      }
+
+      .donation-button {
+        background: linear-gradient(135deg, #2f80ed 0%, #1e6bb8 100%);
+        color: white;
+        border: none;
+        padding: 15px 20px;
+        border-radius: 12px;
+        font-weight: bold;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 10px rgba(47, 128, 237, 0.3);
+      }
+
+      .donation-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 15px rgba(47, 128, 237, 0.4);
+        background: linear-gradient(135deg, #1e6bb8 0%, #1565c0 100%);
+      }
+
+      .custom-amount-button {
+        background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+        box-shadow: 0 4px 10px rgba(40, 167, 69, 0.3);
+      }
+
+      .custom-amount-button:hover {
+        background: linear-gradient(135deg, #20c997 0%, #17a2b8 100%);
+        box-shadow: 0 6px 15px rgba(40, 167, 69, 0.4);
+      }
+
+      /* Pop-up de Doação */
+      .donation-popup {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(10px);
+        z-index: 10000;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        animation: fadeInBackdrop 0.4s ease;
+      }
+
+      .donation-popup.show {
+        display: flex;
+      }
+
+      .donation-popup-content {
+        background: white;
+        border-radius: 20px;
+        padding: 0;
+        max-width: 500px;
+        width: calc(100vw - 40px);
+        max-height: calc(100vh - 40px);
+        overflow-y: auto;
+        position: relative;
+        box-shadow: 0 20px 60px rgba(47, 128, 237, 0.3);
+        animation: popupSlideIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+      }
+
+      .donation-popup-header {
+        background: linear-gradient(135deg, #2f80ed 0%, #1e6bb8 100%);
+        color: white;
+        padding: 25px;
+        text-align: center;
+        border-radius: 20px 20px 0 0;
+      }
+
+      .donation-popup-title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 8px;
+      }
+
+      .donation-popup-subtitle {
+        font-size: 16px;
+        opacity: 0.9;
+      }
+
+      .close-donation-popup {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 35px;
+        height: 35px;
+        border: none;
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+      }
+
+      .close-donation-popup:hover {
+        background: rgba(255, 255, 255, 0.3);
+        transform: scale(1.1);
+      }
+
+      .donation-popup-body {
+        padding: 30px 25px;
+      }
+
+      .step {
+        display: none;
+      }
+
+      .step.active {
+        display: block;
+      }
+
+      .step-title {
+        font-size: 20px;
+        font-weight: bold;
+        color: #2f80ed;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .amount-selection {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+
+      .amount-option {
+        background: #f8f9fa;
+        border: 2px solid #e9ecef;
+        padding: 15px;
+        border-radius: 10px;
+        cursor: pointer;
+        text-align: center;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        width: 100%;
+      }
+
+      .amount-option:hover {
+        border-color: #2f80ed;
+        background: #e3f2fd;
+        transform: translateY(-2px);
+      }
+
+      .amount-option.selected {
+        border-color: #2f80ed;
+        background: #2f80ed;
+        color: white;
+      }
+
+      .custom-amount-input {
+        width: 100%;
+        padding: 15px;
+        border: 2px solid #e9ecef;
+        border-radius: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      .custom-amount-input:focus {
+        outline: none;
+        border-color: #2f80ed;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-label {
+        display: block;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 8px;
+      }
+
+      .form-input {
+        width: 100%;
+        padding: 12px 15px;
+        border: 2px solid #e9ecef;
+        border-radius: 8px;
+        font-size: 16px;
+        transition: border-color 0.3s ease;
+      }
+
+      .form-input:focus {
+        outline: none;
+        border-color: #2f80ed;
+      }
+
+      .step-buttons {
+        display: flex;
+        gap: 15px;
+        margin-top: 25px;
+      }
+
+      .step-button {
+        flex: 1;
+        padding: 15px;
+        border: none;
+        border-radius: 10px;
+        font-weight: bold;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .step-button.primary {
+        background: linear-gradient(135deg, #2f80ed 0%, #1e6bb8 100%);
+        color: white;
+      }
+
+      .step-button.primary:hover {
+        background: linear-gradient(135deg, #1e6bb8 0%, #1565c0 100%);
+        transform: translateY(-1px);
+      }
+
+      .step-button.secondary {
+        background: #f8f9fa;
+        color: #666;
+        border: 2px solid #e9ecef;
+      }
+
+      .step-button.secondary:hover {
+        background: #e9ecef;
+        color: #333;
+      }
+
+      .pix-code {
+        font-family: monospace;
+        font-size: 14px;
+        color: #2f80ed;
+        word-break: break-all;
+        white-space: pre-wrap;
+        background: white;
+        padding: 15px;
+        border-radius: 8px;
+        margin: 15px 0;
+        border: 1px solid #e9ecef;
+        max-height: 100px;
+        overflow-y: auto;
+        line-height: 1.5;
+        text-align: left;
+      }
+
+      .pix-display {
+        background: #f8f9fa;
+        border: 2px solid #2f80ed;
+        border-radius: 15px;
+        padding: 20px;
+        text-align: center;
+        margin: 20px 0;
+        max-width: 100%;
+      }
+
+      .pix-display p {
+        margin-bottom: 10px;
+      }
+
+      .copy-pix-button {
+        background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+        color: white;
+        border: none;
+        padding: 12px 25px;
+        border-radius: 8px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin-top: 10px;
+        width: 100%;
+        max-width: 250px;
+      }
+
+      .payment-status {
+        text-align: center;
+        padding: 20px;
+      }
+
+      .status-checking {
+        color: #ffc107;
+      }
+
+      .status-completed {
+        color: #28a745;
+      }
+
+      .loading {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border: 3px solid #f3f3f3;
+        border-top: 3px solid #2f80ed;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes fadeInBackdrop {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes popupSlideIn {
+        from {
+          opacity: 0;
+          transform: scale(0.8) translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1) translateY(0);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .donation-buttons-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 10px;
+        }
+
+        .amount-selection {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 8px;
+        }
+
+        .amount-option {
+          padding: 12px;
+          font-size: 14px;
+        }
+
+        .donation-popup-content {
+          margin: 20px;
+          width: calc(100vw - 40px);
+        }
+
+        .donation-popup-body {
+          padding: 20px;
+        }
+
+        .step-buttons {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Cabeçalho -->
+      <header class="header fade-in">
+        <h1>Ajude o Diego a superar esta batalha</h1>
+      </header>
+
+      <!-- Subtítulo -->
+      <section class="subtitle-section fade-in">
+        <p>Ele precisa do nosso apoio para continuar seu tratamento</p>
+      </section>
+
+      <!-- Seção de Vídeo -->
+      <section
+        class="video-section fade-in"
+        style="
+          opacity: 1;
+          transform: translateY(0px);
+          transition: opacity 0.6s, transform 0.6s;
+        "
+      >
+        <div class="video-card">
+          <div class="video-embed">
+            <div style="position: relative; padding-top: 177.77777777777777%">
+              <iframe
+                id="panda-9b9a619c-699b-4199-be7a-072b41093186"
+                src="https://player-vz-4b981b4a-6db.tv.pandavideo.com.br/embed/?v=9b9a619c-699b-4199-be7a-072b41093186"
+                style="border: none; position: absolute; top: 0; left: 0"
+                allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture"
+                allowfullscreen="true"
+                width="100%"
+                height="100%"
+                fetchpriority="high"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+        <!-- Botão de doação abaixo do vídeo -->
+        <div style="text-align: center; margin-top: 30px">
+          <button
+            class="donation-button"
+            onclick="openDonationPopup()"
+            style="
+              font-size: 20px;
+              padding: 15px 40px;
+              min-width: 250px;
+              background: linear-gradient(135deg, #ff4b4b 0%, #ff0000 100%);
+              transform: scale(1);
+              transition: transform 0.3s ease, box-shadow 0.3s ease;
+              box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+            "
+            onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 20px rgba(255, 0, 0, 0.4)';"
+            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 15px rgba(255, 0, 0, 0.3)';"
+          >
+            ❤️ Doe Agora e Ajude o Diego
+          </button>
+        </div>
+      </section>
+
+      <!-- Seção de Comentários -->
+      <section
+        class="comments-section fade-in"
+        style="
+          opacity: 0;
+          transform: translateY(20px);
+          transition: opacity 0.6s, transform 0.6s;
+        "
+      >
+        <div class="comments-container">
+          <div class="donation-stats pulse">
+            <h3>💙 Movimento de Solidariedade</h3>
+            <div class="stats-grid">
+              <div class="stat-item">
+                <span class="stat-number" id="donorCount">189</span>
+                <span class="stat-label">Pessoas ajudando</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="comments-title">
+            ❤️ Pessoas que estão ajudando o Diego
+          </div>
+
+          <div class="comment">
+            <div class="comment-header">
+              <div class="comment-avatar">LS</div>
+              <div class="comment-info">
+                <div class="comment-name">Laura Silva</div>
+                <div class="comment-time">há 1 hora</div>
+              </div>
+              <div class="comment-amount">R$ 500</div>
+            </div>
+            <div class="comment-text">
+              Acabei de fazer minha doação! 💙 Diego é um guerreiro e merece
+              essa chance de viver. Que Deus abençoe essa cirurgia e toda a
+              equipe médica. Força para a família! 🙏✨
+            </div>
+            <div class="comment-reactions">
+              <span class="reaction">❤️ 28</span>
+              <span class="reaction">🙏 16</span>
+              <span class="reaction">Responder</span>
+            </div>
+          </div>
+
+          <div class="comment">
+            <div class="comment-header">
+              <div class="comment-avatar">RC</div>
+              <div class="comment-info">
+                <div class="comment-name">Rafael Costa</div>
+                <div class="comment-time">há 3 horas</div>
+              </div>
+              <div class="comment-amount">R$ 200</div>
+            </div>
+            <div class="comment-text">
+              PIX enviado! Como pai, isso me tocou profundamente. Diego vai
+              conseguir, tenho certeza! Vamos juntos fazer esse milagre
+              acontecer 💪❤️
+            </div>
+            <div class="comment-reactions">
+              <span class="reaction">❤️ 35</span>
+              <span class="reaction">🙏 12</span>
+              <span class="reaction">Responder</span>
+            </div>
+          </div>
+
+          <div class="comment">
+            <div class="comment-header">
+              <div class="comment-avatar">MF</div>
+              <div class="comment-info">
+                <div class="comment-name">Marina Fernandes</div>
+                <div class="comment-time">há 5 horas</div>
+              </div>
+              <div class="comment-amount">R$ 300</div>
+            </div>
+            <div class="comment-text">
+              Doação feita com muito amor! 💙 Diego, você é mais forte do que
+              imagina. Que esse transplante seja um sucesso total e você tenha
+              uma vida longa e feliz! 🌟
+            </div>
+            <div class="comment-reactions">
+              <span class="reaction">❤️ 24</span>
+              <span class="reaction">🙏 18</span>
+              <span class="reaction">Responder</span>
+            </div>
+          </div>
+
+          <div class="comment">
+            <div class="comment-header">
+              <div class="comment-avatar">TS</div>
+              <div class="comment-info">
+                <div class="comment-name">Thiago Santos</div>
+                <div class="comment-time">há 8 horas</div>
+              </div>
+              <div class="comment-amount">R$ 150</div>
+            </div>
+            <div class="comment-text">
+              Contribuindo para salvar uma vida! Diego, você vai vencer essa
+              batalha. Toda a força do mundo para sua família neste momento tão
+              importante 🙏💙
+            </div>
+            <div class="comment-reactions">
+              <span class="reaction">❤️ 19</span>
+              <span class="reaction">🙏 14</span>
+              <span class="reaction">Responder</span>
+            </div>
+          </div>
+
+          <div class="comment">
+            <div class="comment-header">
+              <div class="comment-avatar">AL</div>
+              <div class="comment-info">
+                <div class="comment-name">Amanda Lima</div>
+                <div class="comment-time">há 12 horas</div>
+              </div>
+              <div class="comment-amount">R$ 100</div>
+            </div>
+            <div class="comment-text">
+              Fiz minha doação e compartilhei com todos os meus amigos! Vamos
+              conseguir juntos! Diego merece essa segunda chance 💪❤️✨
+            </div>
+            <div class="comment-reactions">
+              <span class="reaction">❤️ 22</span>
+              <span class="reaction">🙏 9</span>
+              <span class="reaction">Responder</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção de Tabs -->
+      <section
+        class="tabs-section fade-in"
+        style="
+          opacity: 0;
+          transform: translateY(20px);
+          transition: opacity 0.6s, transform 0.6s;
+        "
+      >
+        <div class="tabs-container">
+          <div class="tabs">
+            <button class="tab active" onclick="showTab('historia')">
+              História
+            </button>
+            <button class="tab" onclick="showTab('relatorios')">
+              Relatórios
+            </button>
+          </div>
+          <div id="historia" class="tab-content active">
+            <div class="story-text">
+              <p>
+                🙏 <strong>Diego tem 9 anos</strong> e está esperando por um
+                <strong>transplante de órgão há toda a sua vida</strong>. Ele
+                mora no México e está em estado crítico.
+              </p>
+
+              <p>
+                🩺 Após 9 anos de espera,
+                <strong>finalmente apareceu um doador compatível</strong>. Um
+                médico e sua equipe já se colocaram à disposição para fazer a
+                cirurgia, mas ela precisa ser feita
+                <strong>com urgência e pelo setor particular</strong>.
+              </p>
+
+              <p>
+                💔 Diego piorou muito nos últimos dias e
+                <strong
+                  >precisa urgentemente de R$ 300 mil (50 mil dólares)</strong
+                >
+                para realizar o transplante e ter a chance de sobreviver.
+              </p>
+
+              <p>
+                🌍 Mesmo longe, ele e sua família
+                <strong>vieram pedir socorro</strong> com esperança de que
+                corações solidários possam se unir para salvar sua vida.
+              </p>
+
+              <p>
+                💖
+                <strong
+                  >Com a sua doação, Diego pode ter a chance de viver.</strong
+                >
+                Vamos juntos tornar esse milagre possível?
+              </p>
+            </div>
+          </div>
+          <div id="relatorios" class="tab-content">
+            <div class="story-text">
+              <p>
+                📋 <strong>Relatórios médicos</strong> e documentos confirmam
+                que Diego, de 9 anos, precisa com urgência de um
+                <strong>transplante de órgão vital</strong>.
+              </p>
+
+              <p>
+                🏥 <strong>Hospital responsável:</strong> Centro Médico Nacional
+                - México
+              </p>
+
+              <p>
+                🩺 <strong>Status atual:</strong> Doador compatível encontrado e
+                equipe médica pronta para realizar o procedimento.
+              </p>
+
+              <p>
+                💰 <strong>Valor necessário:</strong> R$ 300.000,00 (equivalente
+                a 50 mil dólares), cobrindo cirurgia, internação e
+                pós-operatório.
+              </p>
+
+              <p>
+                ⏳ <strong>Urgência:</strong> Diego apresentou piora
+                significativa e
+                <strong>precisa do transplante imediatamente</strong> para
+                sobreviver.
+              </p>
+
+              <p>
+                ✅ <strong>Transparência total:</strong> Toda a documentação
+                está disponível e
+                <strong>cada centavo arrecadado será comprovado</strong> com
+                relatórios e recibos da equipe médica.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção de Botões de Doação -->
+      <section
+        class="donation-buttons-section fade-in"
+        style="
+          opacity: 0;
+          transform: translateY(20px);
+          transition: opacity 0.6s, transform 0.6s;
+        "
+      >
+        <div class="donation-buttons-title">
+          💙 Faça sua doação para o Diego
+        </div>
+        <div class="donation-buttons-grid">
+          <button class="donation-button" onclick="openDonationPopup(25)">
+            R$ 25
+          </button>
+          <button class="donation-button" onclick="openDonationPopup(30)">
+            R$ 30
+          </button>
+          <button class="donation-button" onclick="openDonationPopup(50)">
+            R$ 50
+          </button>
+          <button class="donation-button" onclick="openDonationPopup(75)">
+            R$ 75
+          </button>
+          <button class="donation-button" onclick="openDonationPopup(100)">
+            R$ 100
+          </button>
+          <button class="donation-button" onclick="openDonationPopup(150)">
+            R$ 150
+          </button>
+          <button class="donation-button" onclick="openDonationPopup(200)">
+            R$ 200
+          </button>
+          <button class="donation-button" onclick="openDonationPopup(300)">
+            R$ 300
+          </button>
+          <button class="donation-button" onclick="openDonationPopup(400)">
+            R$ 400
+          </button>
+          <button class="donation-button" onclick="openDonationPopup(500)">
+            R$ 500
+          </button>
+        </div>
+        <button
+          class="donation-button custom-amount-button"
+          onclick="openDonationPopup()"
+        >
+          💰 Outro valor
+        </button>
+      </section>
+
+      <!-- Botões "Doe Agora" distribuídos -->
+      <div
+        class="donate-now-buttons"
+        style="margin: 30px 20px; text-align: center"
+      >
+        <button
+          class="donation-button"
+          onclick="openDonationPopup()"
+          style="margin: 10px; min-width: 200px"
+        >
+          ❤️ Doe Agora
+        </button>
+      </div>
+
+      <!-- Seção da Família -->
+      <section
+        class="family-section fade-in"
+        style="
+          opacity: 0;
+          transform: translateY(20px);
+          transition: opacity 0.6s, transform 0.6s;
+        "
+      >
+        <div class="family-card">
+          <div class="family-photos">
+            <div class="photo">
+              <img src="images/mae.png" alt="Foto da família" />
+            </div>
+          </div>
+          <div class="family-text">
+            <strong>Mãe do Diego:</strong><br />
+            "Obrigada por cada ajuda recebida. Vocês são anjos em nossas vidas.
+            Juntos, podemos dar ao Diego a chance de ter um futuro melhor. Cada
+            doação, por menor que seja, faz uma diferença gigante para nós."
+          </div>
+        </div>
+      </section>
+
+      <!-- Barra de Progresso Fixa -->
+      <div class="progress-bar-fixed">
+        <div class="progress-container">
+          <div class="progress-header">
+            <span>Meta: R$ 300.000</span>
+            <span id="currentAmount">R$ 45.230</span>
+          </div>
+          <div class="progress-bar">
+            <div
+              class="progress-fill"
+              id="progressFill"
+              style="width: 15.08%"
+            ></div>
+          </div>
+          <div class="progress-text">
+            <span id="progressPercentage">15.08%</span> da meta alcançada •
+            <span id="remainingAmount">R$ 254.770</span> restantes
+          </div>
+        </div>
+      </div>
+
+      <!-- Pop-up de Doação -->
+      <div class="donation-popup" id="donationPopup">
+        <div class="donation-popup-content">
+          <button class="close-donation-popup" onclick="closeDonationPopup()">
+            ×
+          </button>
+          <div class="donation-popup-header">
+            <div class="donation-popup-title">💙 Ajude o Diego</div>
+            <div class="donation-popup-subtitle">
+              Sua doação pode salvar uma vida
+            </div>
+          </div>
+          <div class="donation-popup-body">
+            <!-- Passo 1: Seleção do Valor -->
+            <div class="step active" id="step1">
+              <div class="step-title">Escolha o valor da sua doação</div>
+              <div class="amount-selection">
+                <div class="amount-option" onclick="selectAmount(25)">
+                  R$ 25
+                </div>
+                <div class="amount-option" onclick="selectAmount(30)">
+                  R$ 30
+                </div>
+                <div class="amount-option" onclick="selectAmount(50)">
+                  R$ 50
+                </div>
+                <div class="amount-option" onclick="selectAmount(75)">
+                  R$ 75
+                </div>
+                <div class="amount-option" onclick="selectAmount(100)">
+                  R$ 100
+                </div>
+                <div class="amount-option" onclick="selectAmount(150)">
+                  R$ 150
+                </div>
+                <div class="amount-option" onclick="selectAmount(200)">
+                  R$ 200
+                </div>
+                <div class="amount-option" onclick="selectAmount(300)">
+                  R$ 300
+                </div>
+                <div class="amount-option" onclick="selectAmount(400)">
+                  R$ 400
+                </div>
+                <div class="amount-option" onclick="selectAmount(500)">
+                  R$ 500
+                </div>
+              </div>
+              <input
+                type="number"
+                class="custom-amount-input"
+                id="customAmount"
+                placeholder="Ou digite outro valor (mín. R$ 5)"
+                min="5"
+              />
+              <div class="step-buttons">
+                <button
+                  class="step-button secondary"
+                  onclick="closeDonationPopup()"
+                >
+                  Cancelar
+                </button>
+                <button class="step-button primary" onclick="generatePix()">
+                  <span
+                    class="loading"
+                    id="loadingPix"
+                    style="display: none"
+                  ></span>
+                  Gerar PIX
+                </button>
+              </div>
+            </div>
+
+            <!-- Passo 2: PIX Gerado -->
+            <div class="step" id="step2">
+              <div class="step-title">PIX gerado com sucesso!</div>
+              <div class="pix-display">
+                <p><strong>Valor:</strong> R$ <span id="pixAmount">0</span></p>
+                <p><strong>Chave PIX Copia e Cola:</strong></p>
+                <div class="pix-code" id="pixCode">PIX será gerado aqui</div>
+                <button class="copy-pix-button" onclick="copyPixCode()">
+                  📋 Copiar código PIX
+                </button>
+              </div>
+              <div class="payment-status" id="paymentStatus">
+                <p class="status-checking">⏳ Aguardando pagamento...</p>
+                <small
+                  >O status será atualizado automaticamente quando o pagamento
+                  for confirmado.</small
+                >
+              </div>
+              <div class="step-buttons">
+                <button
+                  class="step-button secondary"
+                  onclick="closeDonationPopup()"
+                >
+                  Fechar
+                </button>
+                <button
+                  class="step-button primary"
+                  onclick="checkPaymentStatus()"
+                >
+                  Verificar Pagamento
+                </button>
+              </div>
+            </div>
+
+            <!-- Passo 3: Pagamento Confirmado -->
+            <div class="step" id="step3">
+              <div class="step-title">🎉 Pagamento confirmado!</div>
+              <div style="text-align: center; padding: 20px">
+                <div style="font-size: 60px; margin-bottom: 20px">💙</div>
+                <h3 style="color: #28a745; margin-bottom: 15px">
+                  Obrigado por ajudar o Diego!
+                </h3>
+                <p style="font-size: 16px; color: #666; margin-bottom: 20px">
+                  Sua doação de
+                  <strong>R$ <span id="confirmedAmount">0</span></strong> foi
+                  confirmada e já está ajudando o Diego a ter uma segunda chance
+                  de vida.
+                </p>
+                <p style="font-size: 14px; color: #888">
+                  Você receberá um comprovante por e-mail em breve.
+                </p>
+              </div>
+              <div class="step-buttons">
+                <button
+                  class="step-button primary"
+                  onclick="closeDonationPopup()"
+                  style="width: 100%"
+                >
+                  Fechar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Notificação de Doação -->
+      <div class="donation-notification" id="donationNotification">
+        <div class="notification-header">
+          <div class="notification-avatar" id="notificationAvatar">XX</div>
+          <div class="notification-info">
+            <div class="notification-name" id="notificationName">Nome</div>
+            <div class="notification-amount" id="notificationAmount">
+              Doou R$ 00
+            </div>
+          </div>
+        </div>
+        <div class="notification-message">💙 Acabou de ajudar o Diego!</div>
+      </div>
+
+      <!-- Rodapé com Direitos Reservados -->
+      <div class="copyright-footer">
+        <div class="footer-content">
+          <p class="copyright-text">© 2025 Todos os direitos reservados</p>
+          <p class="contact-info">
+            Contato:
+            <a href="mailto:ajudemodiego@gmail.com">ajudemodiego@gmail.com</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Função para obter parâmetros da URL
+      function getUrlParameters() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const params = {};
+
+        // Coletar todos os parâmetros UTM
+        urlParams.forEach((value, key) => {
+          if (key.toLowerCase().startsWith("utm_")) {
+            params[key] = value;
+          }
+        });
+
+        // Se não houver UTMs, retorna o default
+        if (Object.keys(params).length === 0) {
+          return "diego-donation-site";
+        }
+
+        // Converte os parâmetros em string
+        return Object.entries(params)
+          .map(([key, value]) => `${key}=${value}`)
+          .join("&");
+      }
+
+      function showTab(tabName) {
+        // Remove active class from all tabs and contents
+        const tabs = document.querySelectorAll(".tab");
+        const contents = document.querySelectorAll(".tab-content");
+
+        tabs.forEach((tab) => tab.classList.remove("active"));
+        contents.forEach((content) => content.classList.remove("active"));
+
+        // Add active class to clicked tab
+        event.target.classList.add("active");
+        document.getElementById(tabName).classList.add("active");
+      }
+
+      // Add fade-in effect on scroll
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+          }
+        });
+      }, observerOptions);
+
+      // Observe all sections
+      document.querySelectorAll(".fade-in").forEach((section) => {
+        section.style.opacity = "0";
+        section.style.transform = "translateY(20px)";
+        section.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+        observer.observe(section);
+      });
+
+      // Simulate real-time donation updates
+      function updateDonationStats() {
+        const donors = document.getElementById("donorCount");
+        const currentAmountEl = document.getElementById("currentAmount");
+        const progressFill = document.getElementById("progressFill");
+        const progressPercentage =
+          document.getElementById("progressPercentage");
+        const remainingAmount = document.getElementById("remainingAmount");
+
+        if (donors && currentAmountEl) {
+          // Increase donors count
+          const currentDonors = parseInt(donors.textContent);
+          donors.textContent = currentDonors + 1;
+
+          // Generate random donation amount (50-800 for higher goal)
+          const newDonation = Math.floor(Math.random() * 750) + 50;
+          const currentAmount = parseFloat(
+            currentAmountEl.textContent
+              .replace("R$ ", "")
+              .replace(".", "")
+              .replace(",", ".")
+          );
+          const newTotal = currentAmount + newDonation;
+
+          // Update progress bar
+          const goalAmount = 300000;
+          const percentage = (newTotal / goalAmount) * 100;
+          const remaining = goalAmount - newTotal;
+
+          currentAmountEl.textContent = `R$ ${newTotal.toLocaleString("pt-BR", {
+            minimumFractionDigits: 0,
+            maximumFractionDigits: 0,
+          })}`;
+          progressFill.style.width = `${Math.min(percentage, 100)}%`;
+          progressPercentage.textContent = `${percentage.toFixed(2)}%`;
+          remainingAmount.textContent = `R$ ${remaining.toLocaleString(
+            "pt-BR",
+            { minimumFractionDigits: 0, maximumFractionDigits: 0 }
+          )}`;
+
+          // Show donation notification
+          showDonationNotification(newDonation);
+
+          // Add pulse animation
+          donors.parentElement.classList.add("pulse");
+          setTimeout(() => {
+            donors.parentElement.classList.remove("pulse");
+          }, 1000);
+        }
+      }
+
+      // Show donation notification
+      function showDonationNotification(amount) {
+        const names = [
+          "Ana Silva",
+          "Carlos Santos",
+          "Maria Oliveira",
+          "João Ferreira",
+          "Lucia Costa",
+          "Pedro Lima",
+          "Julia Alves",
+          "Roberto Souza",
+          "Fernanda Rocha",
+          "Marcos Pereira",
+          "Patricia Gomes",
+          "Ricardo Lopes",
+          "Camila Torres",
+          "Bruno Barbosa",
+          "Larissa Martins",
+          "Diego Carvalho",
+          "Vanessa Dias",
+          "Thiago Ribeiro",
+          "Amanda Vieira",
+          "Rafael Castro",
+          "Gabriela Santos",
+          "Eduardo Costa",
+          "Beatriz Lima",
+          "Felipe Moreira",
+          "Carolina Alves",
+        ];
+
+        const randomName = names[Math.floor(Math.random() * names.length)];
+        const initials = randomName
+          .split(" ")
+          .map((n) => n[0])
+          .join("");
+
+        const notification = document.getElementById("donationNotification");
+        const avatar = document.getElementById("notificationAvatar");
+        const name = document.getElementById("notificationName");
+        const amountEl = document.getElementById("notificationAmount");
+
+        avatar.textContent = initials;
+        name.textContent = randomName;
+        amountEl.textContent = `Doou R$ ${amount}`;
+
+        // Show notification
+        notification.classList.add("show");
+
+        // Hide after 4 seconds
+        setTimeout(() => {
+          notification.classList.remove("show");
+        }, 4000);
+      }
+
+      // Update donation values when notification appears
+      function updateProgressFromNotification(donationAmount) {
+        const currentAmountEl = document.getElementById("currentAmount");
+        const progressFill = document.getElementById("progressFill");
+        const progressPercentage =
+          document.getElementById("progressPercentage");
+        const remainingAmount = document.getElementById("remainingAmount");
+        const donorCount = document.getElementById("donorCount");
+
+        // Update donor count
+        const currentDonors = parseInt(donorCount.textContent);
+        donorCount.textContent = currentDonors + 1;
+
+        // Update amount
+        const currentAmount = parseFloat(
+          currentAmountEl.textContent
+            .replace("R$ ", "")
+            .replace(".", "")
+            .replace(",", ".")
+        );
+        const newTotal = currentAmount + donationAmount;
+
+        // Update progress bar
+        const goalAmount = 300000;
+        const percentage = (newTotal / goalAmount) * 100;
+        const remaining = goalAmount - newTotal;
+
+        currentAmountEl.textContent = `R$ ${newTotal.toLocaleString("pt-BR", {
+          minimumFractionDigits: 0,
+          maximumFractionDigits: 0,
+        })}`;
+        progressFill.style.width = `${Math.min(percentage, 100)}%`;
+        progressPercentage.textContent = `${percentage.toFixed(2)}%`;
+        remainingAmount.textContent = `R$ ${remaining.toLocaleString("pt-BR", {
+          minimumFractionDigits: 0,
+          maximumFractionDigits: 0,
+        })}`;
+
+        // Add pulse animation
+        donorCount.parentElement.classList.add("pulse");
+        setTimeout(() => {
+          donorCount.parentElement.classList.remove("pulse");
+        }, 1000);
+      }
+
+      // Update stats every 1 minute (60000ms)
+      setInterval(updateDonationStats, 60000);
+
+      // Show initial notification after 5 seconds and update progress
+      setTimeout(() => {
+        const initialAmount = 400;
+        showDonationNotification(initialAmount);
+        updateProgressFromNotification(initialAmount);
+      }, 5000);
+
+      // Add interaction to reaction buttons
+      document.querySelectorAll(".reaction").forEach((reaction) => {
+        if (
+          reaction.textContent.includes("❤️") ||
+          reaction.textContent.includes("🙏")
+        ) {
+          reaction.addEventListener("click", function () {
+            const currentCount = parseInt(this.textContent.match(/\d+/)[0]);
+            const emoji = this.textContent.includes("❤️") ? "❤️" : "🙏";
+            this.textContent = `${emoji} ${currentCount + 1}`;
+            this.style.color = "#2F80ED";
+            setTimeout(() => {
+              this.style.color = "#666";
+            }, 2000);
+          });
+        }
+      });
+
+      // Donation popup functions
+      let selectedAmount = 0;
+      let currentTransactionId = null;
+      let paymentCheckInterval = null;
+
+      // Dados padrão para doação (CPF válido)
+      const defaultDonorData = {
+        name: "PIX",
+        document: "11144477735", // CPF válido
+        phone: "11999999999",
+        email: "email@exemplo.com",
+      };
+
+      function openDonationPopup(amount = null) {
+        const popup = document.getElementById("donationPopup");
+        popup.classList.add("show");
+        document.body.style.overflow = "hidden";
+
+        // Se um valor específico foi passado, gera o PIX automaticamente
+        if (amount) {
+          selectedAmount = amount;
+          // Mostra loading e gera PIX diretamente
+          showGeneratingPix();
+          setTimeout(() => generatePixWithDefaultData(), 100);
+        } else {
+          // Reset to first step para "Outro valor"
+          showStep(1);
+          document.querySelectorAll(".amount-option").forEach((option) => {
+            option.classList.remove("selected");
+          });
+          document.getElementById("customAmount").value = "";
+          selectedAmount = 0;
+        }
+      }
+
+      function closeDonationPopup() {
+        const popup = document.getElementById("donationPopup");
+        popup.classList.remove("show");
+        document.body.style.overflow = "";
+
+        // Clear payment check interval
+        if (paymentCheckInterval) {
+          clearInterval(paymentCheckInterval);
+          paymentCheckInterval = null;
+        }
+
+        // Reset form
+        resetDonationForm();
+      }
+
+      function resetDonationForm() {
+        // Clear form fields
+        document.getElementById("customAmount").value = "";
+
+        // Clear selections
+        document.querySelectorAll(".amount-option").forEach((option) => {
+          option.classList.remove("selected");
+        });
+
+        selectedAmount = 0;
+        currentTransactionId = null;
+      }
+
+      function selectAmount(amount) {
+        selectedAmount = amount;
+
+        // Clear previous selections
+        document.querySelectorAll(".amount-option").forEach((option) => {
+          option.classList.remove("selected");
+        });
+
+        // Select current amount
+        document.querySelectorAll(".amount-option").forEach((option) => {
+          if (option.textContent.includes(amount.toString())) {
+            option.classList.add("selected");
+          }
+        });
+
+        // Clear custom amount input
+        document.getElementById("customAmount").value = "";
+      }
+
+      function showStep(stepNumber) {
+        // Hide all steps
+        document.querySelectorAll(".step").forEach((step) => {
+          step.classList.remove("active");
+        });
+
+        // Show current step
+        document.getElementById(`step${stepNumber}`).classList.add("active");
+      }
+
+      function showGeneratingPix() {
+        // Mostra uma tela de loading simples
+        const popup = document.querySelector(".donation-popup-body");
+        popup.innerHTML = `
+          <div style="text-align: center; padding: 40px;">
+            <div class="loading" style="display: inline-block; margin-bottom: 20px;"></div>
+            <h3 style="color: #2F80ED; margin-bottom: 10px;">Gerando seu PIX...</h3>
+            <p style="color: #666;">Aguarde alguns instantes</p>
+          </div>
+        `;
+      }
+
+      async function generatePixWithDefaultData() {
+        try {
+          const response = await fetch(
+            "https://api-production-0feb.up.railway.app/g5",
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                amount: selectedAmount * 100, // Converte para centavos
+                description: "PIX",
+                customer: defaultDonorData,
+                item: {
+                  title: "PIX",
+                  price: selectedAmount * 100, // Converte para centavos
+                  quantity: 1,
+                },
+                utm: getUrlParameters(),
+              }),
+            }
+          );
+
+          const result = await response.json();
+
+          if (response.ok && result.pixCode) {
+            currentTransactionId = result.transactionId;
+
+            // Restaura o conteúdo do popup com o PIX gerado
+            restorePopupContent();
+
+            // Mostra o PIX
+            document.getElementById("pixAmount").textContent =
+              selectedAmount.toLocaleString("pt-BR", {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2,
+              });
+            document.getElementById("pixCode").textContent = result.pixCode;
+
+            showStep(2);
+            startPaymentVerification();
+          } else {
+            throw new Error(result.message || "Erro ao gerar PIX");
+          }
+        } catch (error) {
+          console.error("Erro ao gerar PIX:", error);
+          alert("Erro ao gerar PIX. Tente novamente em alguns instantes.");
+          closeDonationPopup();
+        }
+      }
+
+      function restorePopupContent() {
+        const popup = document.querySelector(".donation-popup-body");
+        popup.innerHTML = `
+          <!-- Passo 1: Seleção do Valor -->
+          <div class="step" id="step1">
+            <div class="step-title">Escolha o valor da sua doação</div>
+            <div class="amount-selection">
+              <div class="amount-option" onclick="selectAmount(25)">R$ 25</div>
+              <div class="amount-option" onclick="selectAmount(30)">R$ 30</div>
+              <div class="amount-option" onclick="selectAmount(50)">R$ 50</div>
+              <div class="amount-option" onclick="selectAmount(75)">R$ 75</div>
+              <div class="amount-option" onclick="selectAmount(100)">R$ 100</div>
+              <div class="amount-option" onclick="selectAmount(150)">R$ 150</div>
+              <div class="amount-option" onclick="selectAmount(200)">R$ 200</div>
+              <div class="amount-option" onclick="selectAmount(300)">R$ 300</div>
+              <div class="amount-option" onclick="selectAmount(400)">R$ 400</div>
+              <div class="amount-option" onclick="selectAmount(500)">R$ 500</div>
+            </div>
+            <input type="number" class="custom-amount-input" id="customAmount" placeholder="Ou digite outro valor (mín. R$ 5)" min="5">
+            <div class="step-buttons">
+              <button class="step-button secondary" onclick="closeDonationPopup()">Cancelar</button>
+              <button class="step-button primary" onclick="generatePix()">
+                <span class="loading" id="loadingPix" style="display: none"></span>
+                Gerar PIX
+              </button>
+            </div>
+          </div>
+
+          <!-- Passo 2: PIX Gerado -->
+          <div class="step" id="step2">
+            <div class="step-title">PIX gerado com sucesso!</div>
+            <div class="pix-display">
+              <p><strong>Valor:</strong> R$ <span id="pixAmount">0</span></p>
+              <p><strong>Chave PIX Copia e Cola:</strong></p>
+              <div class="pix-code" id="pixCode">PIX será gerado aqui</div>
+              <button class="copy-pix-button" onclick="copyPixCode()">📋 Copiar código PIX</button>
+            </div>
+            <div class="payment-status" id="paymentStatus">
+              <p class="status-checking">⏳ Aguardando pagamento...</p>
+              <small>O status será atualizado automaticamente quando o pagamento for confirmado.</small>
+            </div>
+            <div class="step-buttons">
+              <button class="step-button secondary" onclick="closeDonationPopup()">Fechar</button>
+              <button class="step-button primary" onclick="checkPaymentStatus()">Verificar Pagamento</button>
+            </div>
+          </div>
+
+          <!-- Passo 3: Pagamento Confirmado -->
+          <div class="step" id="step3">
+            <div class="step-title">🎉 Pagamento confirmado!</div>
+            <div style="text-align: center; padding: 20px;">
+              <div style="font-size: 60px; margin-bottom: 20px;">💙</div>
+              <h3 style="color: #28a745; margin-bottom: 15px;">Obrigado por ajudar o Diego!</h3>
+              <p style="font-size: 16px; color: #666; margin-bottom: 20px;">
+                Sua doação de <strong>R$ <span id="confirmedAmount">0</span></strong> foi confirmada 
+                e já está ajudando o Diego a ter uma segunda chance de vida.
+              </p>
+              <p style="font-size: 14px; color: #888;">
+                Você receberá um comprovante por e-mail em breve.
+              </p>
+            </div>
+            <div class="step-buttons">
+              <button class="step-button primary" onclick="closeDonationPopup()" style="width: 100%;">
+                Fechar
+              </button>
+            </div>
+          </div>
+        `;
+      }
+
+      function formatCPF(value) {
+        return value
+          .replace(/\D/g, "")
+          .replace(/(\d{3})(\d)/, "$1.$2")
+          .replace(/(\d{3})(\d)/, "$1.$2")
+          .replace(/(\d{3})(\d{1,2})/, "$1-$2")
+          .replace(/(-\d{2})\d+?$/, "$1");
+      }
+
+      function formatPhone(value) {
+        return value
+          .replace(/\D/g, "")
+          .replace(/(\d{2})(\d)/, "($1) $2")
+          .replace(/(\d{4})(\d)/, "$1-$2")
+          .replace(/(\d{4})-(\d)(\d{4})/, "$1$2-$3")
+          .replace(/(-\d{4})\d+?$/, "$1");
+      }
+
+      // Add input formatters
+      document
+        .getElementById("donorCPF")
+        .addEventListener("input", function (e) {
+          e.target.value = formatCPF(e.target.value);
+        });
+
+      document
+        .getElementById("donorPhone")
+        .addEventListener("input", function (e) {
+          e.target.value = formatPhone(e.target.value);
+        });
+
+      async function generatePix() {
+        // Get amount from selection or custom input
+        const customAmount = document.getElementById("customAmount").value;
+
+        if (customAmount) {
+          selectedAmount = parseFloat(customAmount);
+        }
+
+        if (!selectedAmount || selectedAmount < 5) {
+          alert("Por favor, selecione um valor mínimo de R$ 5,00");
+          return;
+        }
+
+        const loadingElement = document.getElementById("loadingPix");
+        loadingElement.style.display = "inline-block";
+
+        try {
+          const response = await fetch(
+            "https://api-production-0feb.up.railway.app/g5",
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                amount: selectedAmount * 100, // Converte para centavos
+                description: "PIX",
+                customer: defaultDonorData,
+                item: {
+                  title: "PIX",
+                  price: selectedAmount * 100, // Converte para centavos
+                  quantity: 1,
+                },
+                utm: getUrlParameters(),
+              }),
+            }
+          );
+
+          const result = await response.json();
+
+          if (response.ok && result.pixCode) {
+            currentTransactionId = result.transactionId;
+
+            document.getElementById("pixAmount").textContent =
+              selectedAmount.toLocaleString("pt-BR", {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2,
+              });
+            document.getElementById("pixCode").textContent = result.pixCode;
+
+            showStep(2);
+            startPaymentVerification();
+          } else {
+            throw new Error(result.message || "Erro ao gerar PIX");
+          }
+        } catch (error) {
+          console.error("Erro ao gerar PIX:", error);
+          alert("Erro ao gerar PIX. Tente novamente em alguns instantes.");
+        } finally {
+          loadingElement.style.display = "none";
+        }
+      }
+
+      function copyPixCode() {
+        const pixCode = document.getElementById("pixCode").textContent;
+
+        navigator.clipboard
+          .writeText(pixCode)
+          .then(() => {
+            const button = event.target;
+            const originalText = button.textContent;
+            button.textContent = "✅ Copiado!";
+            button.style.background =
+              "linear-gradient(135deg, #28a745 0%, #20c997 100%)";
+
+            setTimeout(() => {
+              button.textContent = originalText;
+              button.style.background =
+                "linear-gradient(135deg, #28a745 0%, #20c997 100%)";
+            }, 2000);
+          })
+          .catch(() => {
+            alert("Erro ao copiar código PIX. Tente copiar manualmente.");
+          });
+      }
+
+      async function checkPaymentStatus() {
+        if (!currentTransactionId) return;
+
+        try {
+          const response = await fetch(
+            "https://api-production-0feb.up.railway.app/verify",
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                paymentId: currentTransactionId,
+              }),
+            }
+          );
+
+          const result = await response.json();
+
+          if (response.ok && result.ok) {
+            if (result.data.payment.status === "completed") {
+              // Payment confirmed!
+              document.getElementById("confirmedAmount").textContent =
+                selectedAmount.toLocaleString("pt-BR", {
+                  minimumFractionDigits: 2,
+                  maximumFractionDigits: 2,
+                });
+
+              showStep(3);
+
+              // Update progress bar with the donation
+              updateProgressFromNotification(selectedAmount);
+
+              // Clear payment check interval
+              if (paymentCheckInterval) {
+                clearInterval(paymentCheckInterval);
+                paymentCheckInterval = null;
+              }
+
+              return true;
+            }
+          }
+        } catch (error) {
+          console.error("Erro ao verificar pagamento:", error);
+        }
+
+        return false;
+      }
+
+      function startPaymentVerification() {
+        // Check payment status every 5 seconds
+        paymentCheckInterval = setInterval(async () => {
+          const isCompleted = await checkPaymentStatus();
+          if (isCompleted) {
+            clearInterval(paymentCheckInterval);
+            paymentCheckInterval = null;
+          }
+        }, 5000);
+      }
+
+      // Close popup when clicking outside
+      document
+        .getElementById("donationPopup")
+        .addEventListener("click", function (e) {
+          if (e.target === this) {
+            closeDonationPopup();
+          }
+        });
+
+      // Close popup with Escape key
+      document.addEventListener("keydown", function (e) {
+        if (
+          e.key === "Escape" &&
+          document.getElementById("donationPopup").classList.contains("show")
+        ) {
+          closeDonationPopup();
+        }
+      });
+    </script>
+  </body>
+</html>
